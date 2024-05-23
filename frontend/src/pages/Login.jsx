@@ -53,7 +53,7 @@ export default function Login() {
     };
 
     try {
-      const response = await axiosInstance.post('/login', credentials);
+      const response = await axiosInstance.post('/login/', credentials);
       const { token, user } = response.data;
       login(user, token);
       toast.success('로그인 성공!');
@@ -148,7 +148,7 @@ export default function Login() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href='/signup' variant='body2'>
+                  <Link href='/signup/' variant='body2'>
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

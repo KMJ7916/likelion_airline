@@ -53,10 +53,10 @@ export default function SignUp() {
     };
 
     try {
-      await axiosInstance.post('/signup', user);
+      await axiosInstance.post('/signup/', user);
       toast.success('Sign up successful! Redirecting to login page...');
       setTimeout(() => {
-        navigate('/login');
+        navigate('/login/');
       }, 2000);
     } catch (error) {
       toast.error('Error signing up. Please try again.');
@@ -150,7 +150,7 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent='flex-end'>
               <Grid item>
-                <Link href='/login' variant='body2'>
+                <Link href='/login/' variant='body2'>
                   Already have an account? Sign in
                 </Link>
               </Grid>
