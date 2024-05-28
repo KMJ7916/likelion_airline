@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'drf_yasg',
+    'ticketapi',
+    'flightapi',
 ]
 
 REST_FRAMEWORK = {
